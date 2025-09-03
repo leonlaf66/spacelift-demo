@@ -5,6 +5,7 @@ module "spacelift_demo" {
     Owner       = "LEON"
     Project     = "Spacelift Demo"
     ManagedBy   = "Terraform"
+    Environment = "dev"
   }
 
   ingress_rule = [
