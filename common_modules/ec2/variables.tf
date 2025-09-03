@@ -53,12 +53,9 @@ variable "egress_rule" {
     referenced_security_group_id = optional(string)
   }))
   default = [{
-    description                  = "Allow all outbound traffic"
-    from_port                    = 0
-    to_port                      = 0
-    ip_protocol                  = "-1"
-    cidr_ipv4                    = "0.0.0.0/0"
-    referenced_security_group_id = null
+    description = "Allow all outbound traffic"
+    ip_protocol = "-1"
+    cidr_ipv4   = "0.0.0.0/0"
   }]
 }
 
