@@ -56,6 +56,9 @@ variable "egress_rule" {
     description = "Allow all outbound traffic"
     ip_protocol = "-1"
     cidr_ipv4   = "0.0.0.0/0"
+    from_port   = null
+    to_port     = null
+     referenced_security_group_id = null
   }]
 }
 
