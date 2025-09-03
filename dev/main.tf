@@ -10,7 +10,7 @@ module "spacelift_demo" {
 
   ingress_rule = [
     {
-      description = "Allow SSH from my home"
+      description = "Allow SSH from my IP"
       from_port   = 22
       to_port     = 22
       ip_protocol = "tcp"
