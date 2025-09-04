@@ -13,7 +13,7 @@ module "spacelift_demo" {
     {
       description = "Allow SSH from my IP"
       from_port   = 22
-      to_port     = 33
+      to_port     = 22
       ip_protocol = "tcp"
       cidr_ipv4   = "100.0.19.192/32"
       referenced_security_group_id = null
