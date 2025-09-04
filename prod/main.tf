@@ -1,11 +1,12 @@
 module "spacelift_demo" {
-  source   = "../common_modules/ec2"
-  app_name = "spacelift-demo"
+  source      = "../common_modules/ec2"
+  app_name    = "spacelift-demo"
+  environment = "prod"
   common_tags = {
     Owner       = "LEON"
     Project     = "Spacelift Demo"
     ManagedBy   = "Terraform"
-    Environment = "dev"
+    Environment = "prod"
   }
 
   ingress_rule = [
