@@ -6,7 +6,7 @@ resource "aws_security_group" "this" {
   tags = merge(
     var.common_tags,
     {
-      Name = "${var.app_name}-sg",
+      Name = "${var.app_name}-security-group",
     }
   )
 }
