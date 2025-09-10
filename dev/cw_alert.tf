@@ -1,5 +1,5 @@
 resource "aws_cloudwatch_metric_alarm" "ec2_cpu_utilization_high" {
-  alarm_name          = "${module.spacelift_demo.app_name}-high-cpu-utilization"
+  alarm_name          = "${local.app_name}-high-cpu-utilization"
   comparison_operator = "GreaterThanOrEqualToThreshold"
   evaluation_periods  = 1
   metric_name         = "CPUUtilization"
