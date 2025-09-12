@@ -5,5 +5,5 @@ locals {
     ManagedBy   = "Terraform"
     Environment = "dev"
   }
-  app_name = "spacelift-demo"
+  app_name = "spacelift-demo-test"
 }
