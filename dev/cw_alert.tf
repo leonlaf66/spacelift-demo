@@ -7,7 +7,7 @@ resource "aws_cloudwatch_metric_alarm" "ec2_cpu_utilization_high" {
   period              = 60
   statistic           = "Average"
   
-  threshold           = 1
+  threshold           = 60
   
   alarm_description = "This alarm fires when the EC2 instance CPU utilization exceeds 1% for 1 minute."
   
