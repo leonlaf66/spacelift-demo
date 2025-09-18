@@ -20,21 +20,10 @@ data "aws_vpc" "selected" {
   }
 }
 
-data "aws_subnets" "all_in_vpc" {
-  filter {
-    name   = "vpc-id"
-    values = [data.aws_vpc.selected.id]
-  }
-}
-
-resource "random_shuffle" "subnet_shuffle" {
-  input = data.aws_subnets.all_in_vpc.ids
-}
-
 resource "aws_instance" "example" {
   ami                    = data.aws_ami.latest_ecs_optimized.id
   instance_type          = var.instance_type 
-  subnet_id              = random_shuffle.subnet_shuffle.result[0]
+  subnet_id              = var.subnet_id
   vpc_security_group_ids = [aws_security_group.this.id]
   key_name               = var.key_name 
 

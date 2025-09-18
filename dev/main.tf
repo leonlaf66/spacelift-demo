@@ -1,7 +1,8 @@
 module "spacelift_demo" {
-  source   = "../common_modules/ec2"
-  app_name = local.app_name
+  source      = "../common_modules/ec2"
+  app_name    = local.app_name
   common_tags = local.common_tags
+  subnet_id   = "subnet-0ec5902204018ae8f"
 
   ingress_rule = [
     {
