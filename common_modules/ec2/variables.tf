@@ -76,3 +76,8 @@ variable "key_name" {
   type        = string
   default     = "spacelift-demo"
 }
+
+variable "subnet_id" {
+  description = "The subnet ID for the EC2 instance"
+  type        = string
+}
