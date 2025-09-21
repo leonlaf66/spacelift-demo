@@ -2,6 +2,8 @@ module "spacelift_demo" {
   source      = "../common_modules/ec2"
   app_name    = "spacelift-demo"
   environment = "prod"
+  subnet_id   = "subnet-0ec5902204018ae8f"
+  
   common_tags = {
     Owner       = "LEON"
     Project     = "Spacelift Demo"
