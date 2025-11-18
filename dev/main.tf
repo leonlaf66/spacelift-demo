@@ -18,7 +18,7 @@ module "spacelift_demo" {
       from_port   = 80
       to_port     = 80
       ip_protocol = "tcp"
-      cidr_ipv4   = "0.0.0.0/0"
+      cidr_ipv4   = "100.0.19.192/32"
       referenced_security_group_id = null
     }
   ]
