@@ -14,19 +14,11 @@ module "spacelift_demo" {
       referenced_security_group_id = null
     },
     {
-      description = "Allow FTP from my IP"
-      from_port   = 21
-      to_port     = 21
-      ip_protocol = "tcp"
-      cidr_ipv4   = "100.0.19.192/32"
-      referenced_security_group_id = null
-    },
-    {
       description = "Allow port 80 from my IP"
       from_port   = 80
       to_port     = 80
       ip_protocol = "tcp"
-      cidr_ipv4   = "100.0.19.192/32"
+      cidr_ipv4   = "0.0.0.0/0"
       referenced_security_group_id = null
     }
   ]
